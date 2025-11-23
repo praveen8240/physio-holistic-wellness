@@ -36,7 +36,7 @@ const Header = ({ isScrolled }) => {
             <img src="/favicon.png" alt="Logo" className="w-10 h-10" />
             <div>
               <h1 className="text-lg font-bold text-gray-900">Center for Physio</h1>
-              <p className="text-xs text-gray-600">Holistic Wellness</p>
+              <p className="text-xs font-semi-bold ">& Holistic Wellness</p>
             </div>
           </div>
 
