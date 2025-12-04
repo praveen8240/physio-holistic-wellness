@@ -101,13 +101,49 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="mt-8">
-                <a
+              <div className="mt-8 space-y-3">
+                <motion.a
                   href="tel:+919133324757"
-                  className="block w-full bg-blue-600 text-white text-center px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="block w-full bg-gradient-to-r from-blue-600 to-green-600 text-white text-center px-6 py-4 rounded-full font-bold hover:from-blue-700 hover:to-green-700 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
                 >
-                  Book Home Visit Now
-                </a>
+                  <span className="text-xl group-hover:animate-bounce">📞</span>
+                  <span>Call Now: +91 91333 24757</span>
+                </motion.a>
+                <motion.a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="block w-full bg-white border-2 border-blue-600 text-blue-600 text-center px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all duration-200"
+                >
+                  📝 Fill Form Instead
+                </motion.a>
+              </div>
+              
+              {/* Marketing Benefits */}
+              <div className="mt-6 p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-green-200">
+                <h4 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                  <span className="text-xl">✨</span> Why Choose Home Consultation?
+                </h4>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-600">✓</span> Comfort of your own home
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-600">✓</span> Personalized one-on-one care
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-600">✓</span> No travel stress
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-600">✓</span> Flexible scheduling
+                  </li>
+                </ul>
               </div>
             </div>
 
@@ -137,12 +173,23 @@ const Contact = () => {
 
           {/* Contact Form */}
           <motion.div
+            id="contact-form"
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="bg-white rounded-xl p-8 shadow-lg"
+            className="bg-white rounded-xl p-8 shadow-lg relative overflow-hidden"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Request Appointment</h3>
+            {/* Decorative background element */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-green-100 rounded-full -mr-16 -mt-16 opacity-50"></div>
+            
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-3xl">📋</span>
+                <h3 className="text-2xl font-bold text-gray-900">Request Home Consultation</h3>
+              </div>
+              <p className="text-gray-600 mb-6 text-sm">
+                Fill out the form below and we'll get back to you within 24 hours to schedule your home visit
+              </p>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -208,13 +255,33 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              <button
+              <motion.button
                 type="submit"
-                className="w-full bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full bg-gradient-to-r from-blue-600 to-green-600 text-white px-6 py-4 rounded-full font-bold hover:from-blue-700 hover:to-green-700 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
               >
-                Send Message
-              </button>
+                <span>Book Home Consultation</span>
+                <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>
+              </motion.button>
+              
+              {/* Trust indicators */}
+              <div className="mt-4 flex items-center justify-center gap-4 text-xs text-gray-500">
+                <div className="flex items-center gap-1">
+                  <span>🔒</span>
+                  <span>Secure</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span>⚡</span>
+                  <span>Quick Response</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span>✓</span>
+                  <span>100% Free Consultation</span>
+                </div>
+              </div>
             </form>
+            </div>
           </motion.div>
         </div>
       </div>

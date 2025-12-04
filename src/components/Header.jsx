@@ -32,24 +32,29 @@ const Header = ({ isScrolled }) => {
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <img src="/favicon.png" alt="Logo" className="w-10 h-10" />
+          <a href="#home" className="flex items-center space-x-2" aria-label="Center for Physio & Holistic Wellness - Home">
+            <img src="/favicon.png" alt="Center for Physio & Holistic Wellness Logo - Dr. Niharika Chowtapalli" className="w-10 h-10" />
             <div>
               <h1 className="text-lg font-bold text-gray-900">Center for Physio</h1>
               <p className="text-xs font-semi-bold ">& Holistic Wellness</p>
             </div>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection(item.href)
+                }}
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                aria-label={`Navigate to ${item.name} section`}
               >
                 {item.name}
-              </button>
+              </a>
             ))}
             <a
               href="tel:+919133324757"
@@ -92,13 +97,18 @@ const Header = ({ isScrolled }) => {
             className="md:hidden mt-4 pb-4 space-y-3"
           >
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection(item.href)
+                }}
                 className="block w-full text-left text-gray-700 hover:text-blue-600 font-medium py-2"
+                aria-label={`Navigate to ${item.name} section`}
               >
                 {item.name}
-              </button>
+              </a>
             ))}
             <a
               href="tel:+919133324757"
