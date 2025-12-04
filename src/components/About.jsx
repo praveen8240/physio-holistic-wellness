@@ -34,9 +34,11 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="flex-shrink-0"
               >
-                <div className="w-48 h-48 bg-gradient-to-br from-blue-600 to-green-500 rounded-full flex items-center justify-center text-white text-6xl font-bold shadow-xl">
-                  DN
-                </div>
+                <img 
+                  src="/Niharika.jpg" 
+                  alt="Dr. Niharika Chowtapalli"
+                  className="w-48 h-48 rounded-full object-cover shadow-xl"
+                />
               </motion.div>
 
               <div className="flex-1 text-center md:text-left">
