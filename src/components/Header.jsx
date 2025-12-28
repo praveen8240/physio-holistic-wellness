@@ -24,19 +24,17 @@ const Header = ({ isScrolled }) => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? 'bg-white shadow-md py-3'
           : 'bg-transparent py-4'
-      }`}
+        }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <a href="#home" className="flex items-center space-x-2" aria-label="Center for Physio & Holistic Wellness - Home">
             <img src="/favicon.png" alt="Center for Physio & Holistic Wellness Logo - Dr. Niharika Chowtapalli" className="w-10 h-10" />
             <div>
-              <h1 className="text-lg font-bold text-gray-900">Center for Physio</h1>
-              <p className="text-xs font-semi-bold ">& Holistic Wellness</p>
+              <h1 className="text-lg font-bold text-gray-900">Center for Physio & Holistic Wellness</h1>
             </div>
           </a>
 
@@ -57,7 +55,7 @@ const Header = ({ isScrolled }) => {
               </a>
             ))}
             <a
-              href="tel:+919133324757"
+              href="tel:+919441372425"
               className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium"
             >
               Book Home Visit
@@ -111,7 +109,7 @@ const Header = ({ isScrolled }) => {
               </a>
             ))}
             <a
-              href="tel:+919133324757"
+              href="tel:+919441372425"
               className="block w-full bg-blue-600 text-white px-6 py-2 rounded-full text-center hover:bg-blue-700 transition-colors duration-200 font-medium"
             >
               Book Home Visit

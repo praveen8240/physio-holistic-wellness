@@ -78,7 +78,7 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">
-              Your Journey to Natural Healing Starts Here.
+              Your Journey to Natural Healing Starts Here
             </p>
           </motion.div>
 
@@ -162,34 +162,6 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* Image Indicators */}
-      {/* <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-30 flex gap-2">
-        {backgroundImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentImageIndex(index)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              currentImageIndex === index
-                ? 'w-8 bg-blue-600'
-                : 'w-2 bg-gray-400 hover:bg-gray-500'
-            }`}
-            aria-label={`Go to image ${index + 1}`}
-          />
-        ))}
-      </div> */}
-
-      {/* Scroll Indicator */}
-      {/* <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, repeat: Infinity, repeatType: 'reverse', duration: 2 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30"
-      >
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2"></div>
-        </div>
-      </motion.div> */}
     </section>
   )
 }

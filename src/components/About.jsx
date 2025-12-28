@@ -34,8 +34,8 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="flex-shrink-0"
               >
-                <img 
-                  src="/Niharika.jpg" 
+                <img
+                  src="/Niharika.jpg"
                   alt="Dr. Niharika Chowtapalli"
                   className="w-48 h-48 rounded-full object-cover shadow-xl"
                 />
@@ -46,7 +46,7 @@ const About = () => {
                   Dr. Niharika Chowtapalli
                 </h3>
                 <p className="text-xl text-blue-600 font-semibold mb-4">
-                  MPT (Ortho) - Certified Physiotherapist
+                  BPT, MPT (Ortho) - Certified Physiotherapist
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Dr. Niharika Chowtapalli is a highly qualified and experienced physiotherapist
@@ -57,7 +57,7 @@ const About = () => {
                 <p className="text-gray-700 leading-relaxed">
                   Her passion lies in helping patients recover from injuries, manage chronic pain,
                   and improve their overall quality of life through personalized treatment plans.
-                  Dr. Niharika believes in treating the whole person, not just the symptoms,
+                  She believes in treating the whole person, not just the symptoms,
                   ensuring long-term wellness and prevention of future issues.
                 </p>
               </div>

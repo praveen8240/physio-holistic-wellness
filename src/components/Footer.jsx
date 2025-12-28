@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion'
-
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
@@ -18,7 +16,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Center for Physio & Holistic Wellness</h3>
             <p className="text-gray-400 mb-4">
-              Your trusted partner in physiotherapy and holistic wellness care in Vijayawada.
+              Your trusted partner in physiotherapy and holistic wellness care in Vijayawada
             </p>
             <div className="flex space-x-4">
               <a
@@ -95,16 +93,16 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Contact Information</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <span className="block">📍 Dr.No:36-9-19/2, Nehru Nagar</span>
+                <span className="block">📍 Dr. No: 36-9-19/2, Nehru Nagar</span>
                 <span className="block">Water Tank Road, Labbipet</span>
                 <span className="block">Vijayawada – 520010</span>
               </li>
               <li>
                 <a
-                  href="tel:+919133324757"
+                  href="tel:+919441372425"
                   className="hover:text-white transition-colors"
                 >
-                  📞 +91 91333 24757
+                  📞 +91 94413 72425
                 </a>
               </li>
               <li>
