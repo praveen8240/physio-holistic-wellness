@@ -75,10 +75,11 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Your Trusted{' '}
+              Best{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">
                 Physiotherapy Care
-              </span>
+              </span>{' '}
+              in Vijayawada
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">
               Your Journey to Natural Healing Starts Here
