@@ -6,11 +6,14 @@ const Hero = () => {
 
   // Professional physiotherapy images - replace with your own images
   const backgroundImages = [
-    'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&q=80', // Physiotherapy session
-    'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&q=80', // Wellness therapy
-    'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80', // Rehabilitation
-    'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1920&q=80', // Holistic wellness
-    'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&q=80', // Professional care
+    // 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&q=80', // Physiotherapy session
+    // 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&q=80', // Wellness therapy
+    // 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80', // Rehabilitation
+    // 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1920&q=80', // Holistic wellness
+    // 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&q=80', // Professional care
+    'https://as2.ftcdn.net/jpg/06/04/29/53/1000_F_604295348_29AGwqod5XiEQHB8lKkkSTUjbw6Ae0Kn.webp',
+    'https://as2.ftcdn.net/jpg/03/33/41/81/1000_F_333418194_7eVyggqq0bSEiyRkDKteRCTMDH51AQx8.jpg',
+    'https://t4.ftcdn.net/jpg/02/72/69/99/240_F_272699960_laK4NEG0lS6eKrF2veS8ix1jHDGzp4dQ.jpg', 'https://t4.ftcdn.net/jpg/00/84/02/33/240_F_84023309_dkbmvDe7JcAvplUZqEeQo2pHmymauDgO.jpg', 'https://t3.ftcdn.net/jpg/00/85/17/00/240_F_85170015_326rRonZTTbjfV4MVXEgSVeL3PzR33Qw.jpg'
   ]
 
   // Auto-slide images every 5 seconds
