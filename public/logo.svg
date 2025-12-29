@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300">
+  <defs>
+    <style>
+      .name-text { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 700; fill: #333333; font-size: 52px; }
+      .sub-text { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400; fill: #666666; font-size: 38px; letter-spacing: 1px; }
+    </style>
+  </defs>
+
+  <g transform="translate(20, -50) scale(0.8)">
+    <path fill="#7AC142" d="M148.5,145.4v-42.2c0,0-52.9,0-101.3,0c0,27.1,0,54.1,0,81.2c27.1,0,54.1,0,81.2,0v90.4 c0,0,32.7-32.2,40.1-61.9c4.3-17.1,4.7-35.1,1.8-52.6c-4.4-26.6-18.1-45.9-21.8-14.9"/>
+    <path fill="#0072BC" d="M245.5,254.6v42.2c0,0,52.9,0,101.3,0c0-27.1,0-54.1,0-81.2c-27.1,0-54.1,0-81.2,0v-90.4 c0,0-32.7,32.2-40.1,61.9c-4.3,17.1-4.7,35.1-1.8,52.6c4.4,26.6,18.1,45.9,21.8,14.9"/>
+    <g fill="#7AC142">
+      <path d="M188.7,45.1c0.7,3.1,3.4,5.1,6.5,4.7c3.1-0.4,5.1-3.4,4.7-6.5c-0.4-3.1-3.4-5.1-6.5-4.7C190.3,34.1,188.3,37.1,188.7,45.1z"/>
+      <rect x="180" y="58" width="12" height="5" rx="1" transform="rotate(-15 186 60.5)"/><rect x="175" y="75" width="12" height="5" rx="1" transform="rotate(-10 181 77.5)"/><rect x="172" y="92" width="12" height="5" rx="1" transform="rotate(-5 178 94.5)"/><rect x="170" y="109" width="12" height="5" rx="1"/><rect x="172" y="126" width="12" height="5" rx="1" transform="rotate(5 178 128.5)"/><rect x="175" y="143" width="12" height="5" rx="1" transform="rotate(10 181 145.5)"/><rect x="180" y="160" width="12" height="5" rx="1" transform="rotate(15 186 162.5)"/><rect x="186" y="177" width="12" height="5" rx="1" transform="rotate(20 192 179.5)"/><rect x="194" y="194" width="12" height="5" rx="1" transform="rotate(15 200 196.5)"/><rect x="202" y="211" width="12" height="5" rx="1" transform="rotate(10 208 213.5)"/><rect x="208" y="228" width="12" height="5" rx="1" transform="rotate(5 214 230.5)"/><rect x="210" y="245" width="12" height="5" rx="1"/><rect x="208" y="262" width="12" height="5" rx="1" transform="rotate(-5 214 264.5)"/><rect x="202" y="279" width="12" height="5" rx="1" transform="rotate(-10 208 281.5)"/><rect x="194" y="296" width="12" height="5" rx="1" transform="rotate(-15 200 298.5)"/><rect x="188" y="313" width="10" height="4" rx="1" transform="rotate(-20 193 315)"/>
+    </g>
+  </g>
+
+  <text x="320" y="135" class="name-text">Center for Physio</text>
+  <text x="320" y="185" class="sub-text">&amp; Holistic Wellness</text>
+</svg>

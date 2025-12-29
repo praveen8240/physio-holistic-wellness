@@ -51,7 +51,7 @@ const Header = ({ isScrolled }) => {
             <a href="#home" className="flex items-center space-x-2" aria-label="Center for Physio & Holistic Wellness - Home">
               <img src="/favicon.png" alt="Center for Physio & Holistic Wellness Logo - Dr. Niharika Chowtapalli" className="w-10 h-10" />
               <div>
-                <div className="text-lg font-bold text-gray-900">Center for Physio & Holistic Wellness</div>
+                <div className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">Center for Physio & Holistic Wellness</div>
               </div>
             </a>
 
