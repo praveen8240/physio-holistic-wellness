@@ -8,19 +8,22 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: 'Patient Review',
-      text: 'Excellent care and professional service. Dr. Niharika helped me recover from my sports injury quickly.',
+      name: 'Suseela',
+      condition: 'Knee Pain',
+      text: 'After struggling with severe knee pain for months, Dr. Niharika’s treatment helped me regain my mobility. Her approach is very gentle and effective.',
       rating: 5,
     },
     {
-      name: 'Patient Review',
-      text: 'The home visit service is very convenient. Highly recommend for anyone needing physiotherapy.',
+      name: 'Vasundhara',
+      condition: 'Back Pain',
+      text: 'I had improved a lot from my chronic back pain. The exercises and manual therapy sessions were exactly what I needed.',
       rating: 5,
     },
     {
-      name: 'Patient Review',
-      text: 'Personalized treatment plan that really worked for my chronic pain. Thank you!',
-      rating: 5,
+      name: 'Ravi',
+      condition: 'Rehabilitation',
+      text: 'Doctor Niharika provided exceptional care during my recovery. Her dedication and expertise made a huge difference in my rehabilitation journey.',
+      rating: 4,
     },
   ]
 
@@ -61,6 +64,9 @@ const Testimonials = () => {
               </p>
               <p className="text-gray-600 font-semibold">
                 — {testimonial.name}
+              </p>
+              <p className="text-sm text-blue-600">
+                ({testimonial.condition})
               </p>
             </motion.div>
           ))}
