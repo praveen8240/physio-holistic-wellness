@@ -99,12 +99,12 @@ const Contact = () => {
                       >
                         contact@centerforphysio.com
                       </a>
-                      <a
+                      {/* <a
                         href="mailto:drniharika@zohomail.in"
                         className="text-blue-600 hover:text-blue-700"
                       >
                         drniharika@zohomail.in
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>

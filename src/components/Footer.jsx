@@ -113,12 +113,12 @@ const Footer = () => {
                   >
                     ✉️ contact@centerforphysio.com
                   </a>
-                  <a
+                  {/* <a
                     href="mailto:drniharika@zohomail.in"
                     className="hover:text-white transition-colors"
                   >
                     ✉️ drniharika@zohomail.in
-                  </a>
+                  </a> */}
                 </div>
               </li>
             </ul>
