@@ -92,12 +92,20 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <a
-                      href="mailto:drniharika@zohomail.in"
-                      className="text-blue-600 hover:text-blue-700"
-                    >
-                      drniharika@zohomail.in
-                    </a>
+                    <div className="flex flex-col">
+                      <a
+                        href="mailto:contact@centerforphysio.com"
+                        className="text-blue-600 hover:text-blue-700"
+                      >
+                        contact@centerforphysio.com
+                      </a>
+                      <a
+                        href="mailto:drniharika@zohomail.in"
+                        className="text-blue-600 hover:text-blue-700"
+                      >
+                        drniharika@zohomail.in
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

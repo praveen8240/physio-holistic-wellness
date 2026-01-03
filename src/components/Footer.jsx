@@ -106,12 +106,20 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:drniharika@zohomail.in"
-                  className="hover:text-white transition-colors"
-                >
-                  ✉️ drniharika@zohomail.in
-                </a>
+                <div className="flex flex-col space-y-1">
+                  <a
+                    href="mailto:contact@centerforphysio.com"
+                    className="hover:text-white transition-colors"
+                  >
+                    ✉️ contact@centerforphysio.com
+                  </a>
+                  <a
+                    href="mailto:drniharika@zohomail.in"
+                    className="hover:text-white transition-colors"
+                  >
+                    ✉️ drniharika@zohomail.in
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
