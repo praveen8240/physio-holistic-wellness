@@ -11,12 +11,44 @@ const Contact = () => {
     phone: '',
     message: '',
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null) // 'success' | 'error' | null
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission
-    const mailtoLink = `mailto:drniharika@zohomail.in?subject=Appointment Request from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AMessage: ${formData.message}`
-    window.location.href = mailtoLink
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'dfaebb6a-cea0-442b-94bb-71b82d275109', // Get from https://web3forms.com
+          subject: `New Appointment Request from ${formData.name}`,
+          from_name: 'Center for Physio Website',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      })
+
+      const result = await response.json()
+      if (result.success) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', phone: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e) => {
@@ -264,14 +296,64 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
+                {/* Success Message */}
+                {submitStatus === 'success' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="p-4 bg-green-100 border border-green-400 rounded-lg"
+                  >
+                    <div className="flex items-center gap-2 text-green-800">
+                      <span className="text-2xl">✅</span>
+                      <div>
+                        <h4 className="font-bold">Message Sent Successfully!</h4>
+                        <p className="text-sm">We'll get back to you within 24 hours.</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Error Message */}
+                {submitStatus === 'error' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="p-4 bg-red-100 border border-red-400 rounded-lg"
+                  >
+                    <div className="flex items-center gap-2 text-red-800">
+                      <span className="text-2xl">❌</span>
+                      <div>
+                        <h4 className="font-bold">Something went wrong!</h4>
+                        <p className="text-sm">Please call us at +91 94413 72425 or try again.</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+
                 <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-blue-600 to-green-600 text-white px-6 py-4 rounded-full font-bold hover:from-blue-700 hover:to-green-700 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
+                  disabled={isSubmitting}
+                  whileHover={!isSubmitting ? { scale: 1.02 } : {}}
+                  whileTap={!isSubmitting ? { scale: 0.98 } : {}}
+                  className={`w-full bg-gradient-to-r from-blue-600 to-green-600 text-white px-6 py-4 rounded-full font-bold transition-all duration-200 shadow-lg flex items-center justify-center gap-2 group ${isSubmitting
+                    ? 'opacity-70 cursor-not-allowed'
+                    : 'hover:from-blue-700 hover:to-green-700 hover:shadow-xl'
+                    }`}
                 >
-                  <span>Book Home Consultation</span>
-                  <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      <span>Sending...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Book Home Consultation</span>
+                      <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>
+                    </>
+                  )}
                 </motion.button>
 
                 {/* Trust indicators */}
