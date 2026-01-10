@@ -9,6 +9,7 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
+    location: '',
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -32,6 +33,7 @@ const Contact = () => {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
+          location: formData.location || 'Not provided',
           message: formData.message,
         }),
       })
@@ -39,7 +41,7 @@ const Contact = () => {
       const result = await response.json()
       if (result.success) {
         setSubmitStatus('success')
-        setFormData({ name: '', email: '', phone: '', message: '' })
+        setFormData({ name: '', email: '', phone: '', location: '', message: '' })
       } else {
         setSubmitStatus('error')
       }
@@ -277,6 +279,21 @@ const Contact = () => {
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="+91 12345 67890"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-2">
+                    Location <span className="text-gray-400 font-normal">(Optional)</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    value={formData.location}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your area/locality"
                   />
                 </div>
 
