@@ -98,10 +98,20 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
                     <p className="text-gray-600 leading-relaxed">
-                      Dr. No. 36-9-19/2,<br />
-                      Nehru Nagar, Water Tank Road,<br />
-                      Labbipet, Vijayawada – 520010
+                      Center for Physio & Holistic Wellness<br />
+                      G2, Ajantha Apartments, 59-8/1-3,<br />
+                      Meharbaba Marg, Gayatri Nagar,<br />
+                      Krishna Nagar, Vijayawada,<br />
+                      Andhra Pradesh – 520008, INDIA
                     </p>
+                    <a
+                      href="https://maps.google.com/?q=G2,+Ajantha+Apartments,+59-8/1-3,+Meharbaba+Marg,+Gayatri+Nagar,+Krishna+Nagar,+Vijayawada,+Andhra+Pradesh+520008"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 mt-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+                    >
+                      📍 Open Live Location on Google Maps ↗
+                    </a>
                   </div>
                 </div>
 
@@ -190,18 +200,22 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Google Maps Embed */}
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Find Us</h3>
-              <div className="w-full h-64 bg-gray-200 rounded-lg overflow-hidden">
-                {/* 
-                  To get the correct embed URL:
-                  1. Go to Google Maps and search for: "Dr.No:36-9-19/2, Nehru Nagar Water Tank Road, Labbipet, Vijayawada"
-                  2. Click "Share" > "Embed a map"
-                  3. Copy the iframe src URL and replace the one below
-                */}
+            {/* Google Maps Embed & Live Location */}
+            <div className="bg-white rounded-xl p-8 shadow-lg space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h3 className="text-2xl font-bold text-gray-900">Find Us & Live Location</h3>
+                <a
+                  href="https://maps.google.com/?q=G2,+Ajantha+Apartments,+59-8/1-3,+Meharbaba+Marg,+Gayatri+Nagar,+Krishna+Nagar,+Vijayawada,+Andhra+Pradesh+520008"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  📍 Open in Google Maps ↗
+                </a>
+              </div>
+              <div className="w-full h-64 bg-gray-200 rounded-lg overflow-hidden border border-gray-100">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.5!2d80.648!3d16.506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDMwJzIxLjYiTiA4MMKwMzgnNTIuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://maps.google.com/maps?q=G2%2C%20Ajantha%20Apartments%2C%2059-8%2F1-3%2C%20Meharbaba%20Marg%2C%20Gayatri%20Nagar%2C%20Krishna%20Nagar%2C%20Vijayawada%2C%20Andhra%20Pradesh%20520008&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -211,6 +225,14 @@ const Contact = () => {
                   title="Center for Physio & Holistic Wellness Location"
                 ></iframe>
               </div>
+              <a
+                href="https://maps.google.com/?q=G2,+Ajantha+Apartments,+59-8/1-3,+Meharbaba+Marg,+Gayatri+Nagar,+Krishna+Nagar,+Vijayawada,+Andhra+Pradesh+520008"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-gradient-to-r from-blue-600 to-green-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 hover:from-blue-700 hover:to-green-700 transition-all shadow-md hover:shadow-lg"
+              >
+                🧭 Get Directions / Open Live Location
+              </a>
             </div>
           </motion.div>
 

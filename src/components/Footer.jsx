@@ -93,9 +93,18 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Contact Information</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <span className="block">📍 Dr. No: 36-9-19/2, Nehru Nagar</span>
-                <span className="block">Water Tank Road, Labbipet</span>
-                <span className="block">Vijayawada – 520010</span>
+                <span className="block font-semibold text-white">📍 Center for Physio & Holistic Wellness</span>
+                <span className="block">G2, Ajantha Apartments, 59-8/1-3</span>
+                <span className="block">Meharbaba Marg, Gayatri Nagar, Krishna Nagar</span>
+                <span className="block">Vijayawada, Andhra Pradesh – 520008</span>
+                <a
+                  href="https://maps.google.com/?q=G2,+Ajantha+Apartments,+59-8/1-3,+Meharbaba+Marg,+Gayatri+Nagar,+Krishna+Nagar,+Vijayawada,+Andhra+Pradesh+520008"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 mt-2 text-xs font-semibold text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  📍 Open Live Location on Google Maps ↗
+                </a>
               </li>
               <li>
                 <a
